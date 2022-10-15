@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 
 import css from 'components/Profile/Profile.module.css';
+import cssBase from 'components/base.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <section className={css.section}>
-      <div className={css.container}>
+    <section className={cssBase.section}>
+      <div className={cssBase.container}>
         <div className={css.profile}>
           <div className={css.description}>
             <img src={avatar} alt="User avatar" className={css.avatar} />
