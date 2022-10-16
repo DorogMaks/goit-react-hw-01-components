@@ -1,9 +1,11 @@
-// .section {
-//   width: 100%;
-//   padding: 40px 0px;
-//   background-color: rgb(220, 220, 220);
-// }
+import styled from 'styled-components';
 
-// .section:nth-child(2n) {
-//   background-color: rgb(240, 240, 240);
-// }
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 16px;
+`;
