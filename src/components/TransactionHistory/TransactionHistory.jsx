@@ -1,34 +1,52 @@
+import PropTypes from 'prop-types';
+
 import { Section } from 'components/Shared/Section.styled';
 import { Container } from 'components/Shared/Container.styled';
-import { Table, TableData, TableHead } from './TransactionHistory.styled';
+import {
+  Table,
+  TableData,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from './TransactionHistory.styled';
 
-export const TransactionHistory = ({ id, type, amount, currency }) => {
+export const TransactionHistory = ({ items }) => {
   return (
     <Section>
       <Container>
         <Table>
-          <thead>
+          <TableHead>
             <tr>
-              <TableHead>Type</TableHead>
-              <TableHead>Amount</TableHead>
-              <TableHead>Currency</TableHead>
+              <TableHeader>Type</TableHeader>
+              <TableHeader>Amount</TableHeader>
+              <TableHeader>Currency</TableHeader>
             </tr>
-          </thead>
+          </TableHead>
 
           <tbody>
-            <tr>
-              <TableData>Invoice</TableData>
-              <TableData>125</TableData>
-              <TableData>USD</TableData>
-            </tr>
-            <tr>
-              <TableData>Withdrawal</TableData>
-              <TableData>85</TableData>
-              <TableData>USD</TableData>
-            </tr>
+            {items.map(({ id, type, amount, currency }) => {
+              return (
+                <TableRow key={id}>
+                  <TableData>{type}</TableData>
+                  <TableData>{amount}</TableData>
+                  <TableData>{currency}</TableData>
+                </TableRow>
+              );
+            })}
           </tbody>
         </Table>
       </Container>
     </Section>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
