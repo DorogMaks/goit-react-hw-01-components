@@ -4,7 +4,7 @@
 
   margin: 0px auto;
 
-  width: 300px;
+  max-width: 300px;
   border-radius: 6px;
   box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px, rgb(0 0 0 / 6%) 0px 4px 4px,
     rgb(0 0 0 / 16%) 1px 4px 6px;
@@ -18,7 +18,7 @@
   align-items: center;
 
   padding: 32px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .avatar {
@@ -27,7 +27,7 @@
   width: 140px;
   height: 140px;
 
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
   border-radius: 50%;
 }
 
@@ -36,7 +36,7 @@
 
   font-weight: 700;
   font-size: 22px;
-  color: rgb(33, 33, 33);
+  color: #212121;
 }
 
 .tag {
@@ -57,7 +57,7 @@
   list-style: none;
   display: flex;
 
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
 }
 
 .statsItem {
@@ -81,12 +81,12 @@
 
   font-size: 14px;
   text-transform: capitalize;
-  color: rgb(33, 33, 33);
+  color: #212121;
 }
 
 .quantity {
   font-weight: 600;
   font-size: 16px;
 
-  color: rgb(33, 33, 33);
+  color: #212121;
 }
